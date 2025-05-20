@@ -93,6 +93,16 @@ export default function Home() {
           )}
         </div>
       </main>
+      <footer className="mt-8 pt-4 border-t text-center text-sm text-gray-500">
+        <a 
+          href="https://github.com/kaibadash/llm-cost-estimator" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="hover:text-gray-700 hover:underline"
+        >
+          GitHub: kaibadash/llm-cost-estimator
+        </a>
+      </footer>
     </div>
   );
 }
