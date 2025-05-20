@@ -50,8 +50,8 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen p-8 font-[family-name:var(--font-geist-sans)]">
-      <main className="max-w-4xl mx-auto">
+    <div className="min-h-screen px-4 py-6 font-[family-name:var(--font-geist-sans)]">
+      <main className="w-full mx-auto">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold">{translations.title}</h1>
           <LanguageSelector 
