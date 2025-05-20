@@ -1,0 +1,44 @@
+# LLM Cost Estimator Project Requirements
+
+## Overview
+
+- LLM cost estimation tool to calculate costs based on prompt examples and request count
+- Multilingual support (initially Japanese and English)
+- Browser's default language setting will be used
+
+## Technical Stack
+
+- Next.js + TypeScript
+- Static site deployment
+- GitHub Pages hosting
+- Token calculation libraries allowed
+- CSV data management
+
+## UI Components
+
+### Input Section
+
+- Prompt input example field
+- Prompt output example field
+- Request count input
+- Language switching menu
+
+### Output Section
+
+- LLM provider (company name)
+- Model name
+- Model input pricing (per 1,000 tokens)
+- Model output pricing (per 1,000 tokens)
+- Estimated cost (USD) - sortable
+- URL to pricing documentation
+
+## Data Management
+
+CSV format with the following fields:
+
+- LLM provider (company name)
+- Model name
+- Input pricing (per 1,000 tokens)
+- Output pricing (per 1,000 tokens)
+- Estimated cost (USD)
+- URL to pricing documentation

@@ -1,0 +1,29 @@
+{
+  "title": "LLM Cost Estimator",
+  "description": "Estimate the cost of using various LLM models based on your prompt examples and request count",
+  "inputSection": {
+    "title": "Input",
+    "promptInput": "Example Prompt (Input)",
+    "promptOutput": "Example Response (Output)",
+    "requestCount": "Number of Requests",
+    "calculate": "Calculate"
+  },
+  "resultsSection": {
+    "title": "Estimated Costs",
+    "provider": "Provider",
+    "model": "Model",
+    "inputPrice": "Input Price (per 1K tokens)",
+    "outputPrice": "Output Price (per 1K tokens)",
+    "estimatedCost": "Estimated Cost (USD)",
+    "pricingLink": "Pricing Details",
+    "inputTokens": "Input Tokens",
+    "outputTokens": "Output Tokens",
+    "totalTokens": "Total Tokens",
+    "sortBy": "Sort by"
+  },
+  "languageSelector": {
+    "label": "Language",
+    "en": "English",
+    "ja": "Japanese"
+  }
+}

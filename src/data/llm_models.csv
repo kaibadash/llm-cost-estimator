@@ -1,0 +1,19 @@
+provider,model,input_price,output_price,pricing_url
+OpenAI,GPT-4.1,2.00,8.00,https://openai.com/pricing
+OpenAI,GPT-4.1 mini,0.40,1.60,https://openai.com/pricing
+OpenAI,GPT-4.1 nano,0.10,0.40,https://openai.com/pricing
+OpenAI,o3,10.00,40.00,https://openai.com/pricing
+OpenAI,o4-mini,1.10,4.40,https://openai.com/pricing
+Anthropic,Claude 3 Opus,0.015,0.075,https://www.anthropic.com/pricing
+Anthropic,Claude 3.5 Sonnet,0.003,0.015,https://www.anthropic.com/pricing
+Anthropic,Claude 3 Haiku,0.00025,0.00125,https://www.anthropic.com/pricing
+Anthropic,Claude 3.7 Sonnet,0.003,0.015,https://www.anthropic.com/pricing
+Anthropic,Claude 3.5 Haiku,0.0008,0.004,https://www.anthropic.com/pricing
+Google,Gemini 1.5 Pro,0.0005,0.0015,https://ai.google.dev/pricing
+Google,Gemini 1.5 Flash,0.00025,0.0005,https://ai.google.dev/pricing
+Google,Gemini 2.5 Flash,0.15,0.60,https://ai.google.dev/pricing
+Google,Gemini 2.5 Pro,1.25,10.00,https://ai.google.dev/pricing
+Google,Gemini 2.0 Flash,0.10,0.40,https://ai.google.dev/pricing
+Google,Gemini 2.0 Flash-Lite,0.075,0.30,https://ai.google.dev/pricing
+DeepSeek,deepseek-chat,0.27,1.10,https://platform.deepseek.com/pricing
+DeepSeek,deepseek-reasoner,0.55,2.19,https://platform.deepseek.com/pricing
