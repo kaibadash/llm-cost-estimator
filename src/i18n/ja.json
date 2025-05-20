@@ -1,0 +1,29 @@
+{
+  "title": "LLMコスト見積もりツール",
+  "description": "プロンプト例とリクエスト回数に基づいて、各種LLMモデルの使用コストを見積もります",
+  "inputSection": {
+    "title": "入力",
+    "promptInput": "プロンプト例（入力）",
+    "promptOutput": "レスポンス例（出力）",
+    "requestCount": "リクエスト回数",
+    "calculate": "計算する"
+  },
+  "resultsSection": {
+    "title": "推定コスト",
+    "provider": "プロバイダー",
+    "model": "モデル",
+    "inputPrice": "入力価格（1,000トークンあたり）",
+    "outputPrice": "出力価格（1,000トークンあたり）",
+    "estimatedCost": "推定コスト（USD）",
+    "pricingLink": "価格詳細",
+    "inputTokens": "入力トークン数",
+    "outputTokens": "出力トークン数",
+    "totalTokens": "合計トークン数",
+    "sortBy": "並び替え"
+  },
+  "languageSelector": {
+    "label": "言語",
+    "en": "英語",
+    "ja": "日本語"
+  }
+}
