@@ -15,7 +15,7 @@ export default function Home() {
   const [results, setResults] = useState<ModelCostEstimate[]>([]);
 
   useEffect(() => {
-    // クライアントサイドでのみ実行
+    // Only execute on client-side
     setLanguage(getDefaultLanguage());
   }, []);
 

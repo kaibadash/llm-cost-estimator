@@ -2,12 +2,12 @@ import { Tiktoken } from 'js-tiktoken';
 
 let tokenizer: Tiktoken | null = null;
 
-// トークン計算のためのクラスを初期化
+// Initialize class for token calculation
 async function initTokenizer() {
   if (!tokenizer) {
     const { Tiktoken } = await import('js-tiktoken');
     tokenizer = new Tiktoken(
-      // cl100k_baseはGPT-4, GPT-3.5-Turboなどの最新モデルで使用されるエンコーディング
+      // cl100k_base is the encoding used by latest models like GPT-4, GPT-3.5-Turbo
       'cl100k_base'
     );
   }
@@ -23,7 +23,7 @@ export async function countTokens(text: string): Promise<number> {
     return tokens.length;
   } catch (error) {
     console.error('Error counting tokens:', error);
-    // フォールバック: 単語数に基づいた大まかな推定
+    // Fallback: rough estimation based on word count
     return Math.ceil(text.split(/\s+/).length * 1.3);
   }
 }

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "LLM Cost Estimator",
-  description: "大規模言語モデル（LLM）の使用コストを計算するツール",
+  description: "A tool for calculating usage costs of Large Language Models (LLM)",
 };
 
 export default function RootLayout({

@@ -8,12 +8,12 @@ export const translations: Record<Language, TranslationStrings> = {
 };
 
 export function getDefaultLanguage(): Language {
-  // クライアントサイドでのみ実行
+  // Only execute on client-side
   if (typeof window !== 'undefined') {
     const browserLang = window.navigator.language.split('-')[0];
     return browserLang === 'ja' ? 'ja' : 'en';
   }
-  return 'en'; // サーバーサイドのデフォルト
+  return 'en'; // Default for server-side
 }
 
 export function getTranslations(lang: Language): TranslationStrings {

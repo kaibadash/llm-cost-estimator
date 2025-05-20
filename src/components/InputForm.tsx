@@ -13,10 +13,10 @@ export default function InputForm({ onCalculate, translations }: InputFormProps)
   const [outputText, setOutputText] = useState<string>('');
   const [requestCount, setRequestCount] = useState<number>(1);
 
-  // 入力が変更されるたびに自動的に計算を実行
+  // Automatically run calculation whenever input changes
   useEffect(() => {
     onCalculate(inputText, outputText, requestCount);
-  }, [inputText, outputText, requestCount]); // onCalculateを依存配列から削除
+  }, [inputText, outputText, requestCount]); // Removed onCalculate from dependency array
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">

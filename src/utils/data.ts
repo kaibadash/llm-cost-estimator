@@ -1,13 +1,13 @@
 import { LLMModel } from '@/types';
-// CSVを直接importするための型宣言
+// Type declaration for direct CSV import
 import modelDataRaw from '@/data/llm_models.csv';
 
-// 文字列として読み込まれたCSVを変数に格納
+// Store CSV loaded as string in variable
 const modelData = modelDataRaw as string;
 
 export async function getModelData(): Promise<LLMModel[]> {
   try {
-    // CSVデータを解析して返す
+    // Parse and return CSV data
     const lines = modelData.trim().split('\n');    
     return lines.slice(1).map(line => {
       const values = line.split(',');
