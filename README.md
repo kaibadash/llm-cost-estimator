@@ -46,3 +46,35 @@ yarn dev
 ```
 
 The application should now be running at http://localhost:3000
+
+## CSV Data Maintenance
+
+The application uses a CSV file to store LLM model pricing data. To update or add new models:
+
+1. Open the CSV file at `src/data/llm_models.csv`
+2. Maintain the following format for each row:
+
+   ```
+   provider,model,input_price,output_price,pricing_url
+   ```
+
+   - `provider`: The company providing the LLM (e.g., OpenAI, Anthropic)
+   - `model`: The specific model name (e.g., GPT-4, Claude 3)
+   - `input_price`: Cost per 1,000 input tokens in USD
+   - `output_price`: Cost per 1,000 output tokens in USD
+   - `pricing_url`: URL to the provider's pricing documentation
+
+3. After updating the CSV file, rebuild the application:
+
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+4. For production deployment, use:
+   ```bash
+   npm run deploy
+   # or
+   yarn deploy
+   ```
