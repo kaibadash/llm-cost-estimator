@@ -6,9 +6,12 @@ import { TranslationStrings } from '@/types';
 interface InputFormProps {
   onCalculate: (inputText: string, outputText: string, requestCount: number) => void;
   translations: TranslationStrings;
+  inputTokens?: number;
+  outputTokens?: number;
+  totalTokens?: number;
 }
 
-export default function InputForm({ onCalculate, translations }: InputFormProps) {
+export default function InputForm({ onCalculate, translations, inputTokens = 0, outputTokens = 0, totalTokens = 0 }: InputFormProps) {
   const [inputText, setInputText] = useState<string>('');
   const [outputText, setOutputText] = useState<string>('');
   const [requestCount, setRequestCount] = useState<number>(1);
@@ -48,7 +51,7 @@ export default function InputForm({ onCalculate, translations }: InputFormProps)
         />
       </div>
       
-      <div className="mb-4">
+      <div className="mb-2">
         <label htmlFor="requestCount" className="block text-sm font-medium text-gray-900 mb-1">
           {translations.inputSection.requestCount}
         </label>
@@ -60,6 +63,12 @@ export default function InputForm({ onCalculate, translations }: InputFormProps)
           onChange={(e) => setRequestCount(Math.max(1, parseInt(e.target.value) || 1))}
           className="w-full p-2 border border-gray-300 rounded-md text-gray-900"
         />
+      </div>
+
+      <div className="flex space-x-4 text-sm text-gray-700 mb-2">
+        <div>{translations.resultsSection.inputTokens}: {inputTokens}</div>
+        <div>{translations.resultsSection.outputTokens}: {outputTokens}</div>
+        <div>{translations.resultsSection.totalTokens}: {totalTokens}</div>
       </div>
     </div>
   );

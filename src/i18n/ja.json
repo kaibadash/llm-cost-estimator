@@ -1,5 +1,5 @@
 {
-  "title": "LLMコスト見積もりツール",
+  "title": "LLM Cost Estimator",
   "description": "プロンプト例とリクエスト回数に基づいて、各種LLMモデルの使用コストを見積もります",
   "inputSection": {
     "title": "入力",

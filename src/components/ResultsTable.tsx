@@ -150,14 +150,6 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
           </tbody>
         </table>
       </div>
-
-      {results.length > 0 && (
-        <div className="mt-4 text-sm text-gray-600">
-          <div>{translations.resultsSection.inputTokens}: {results[0].inputTokens.toLocaleString()}</div>
-          <div>{translations.resultsSection.outputTokens}: {results[0].outputTokens.toLocaleString()}</div>
-          <div>{translations.resultsSection.totalTokens}: {results[0].totalTokens.toLocaleString()}</div>
-        </div>
-      )}
     </div>
   );
 } 

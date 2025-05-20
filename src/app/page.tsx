@@ -13,6 +13,11 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>('en');
   const [translations, setTranslations] = useState(getTranslations(language));
   const [results, setResults] = useState<ModelCostEstimate[]>([]);
+  const [tokenCounts, setTokenCounts] = useState({
+    inputTokens: 0,
+    outputTokens: 0,
+    totalTokens: 0
+  });
 
   useEffect(() => {
     // Only execute on client-side
@@ -35,6 +40,15 @@ export default function Home() {
           model.output_price,
           requestCount
         );
+        
+        // Update token counts at the first calculation
+        if (model === models[0]) {
+          setTokenCounts({
+            inputTokens,
+            outputTokens,
+            totalTokens
+          });
+        }
         
         return {
           ...model,
@@ -66,7 +80,13 @@ export default function Home() {
         </p>
         
         <div className="space-y-6">
-          <InputForm onCalculate={handleCalculate} translations={translations} />
+          <InputForm 
+            onCalculate={handleCalculate} 
+            translations={translations} 
+            inputTokens={tokenCounts.inputTokens} 
+            outputTokens={tokenCounts.outputTokens} 
+            totalTokens={tokenCounts.totalTokens} 
+          />
           
           {results.length > 0 && (
             <ResultsTable results={results} translations={translations} />
