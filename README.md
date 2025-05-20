@@ -2,6 +2,8 @@
 
 A tool for estimating and tracking costs associated with using large language models (LLMs) in applications.
 
+**[🚀 Launch the Application](https://kaibadash.github.io/llm-cost-estimator/llm-cost-estimator/)**
+
 ## Description
 
 LLM Cost Estimator helps developers and organizations:
