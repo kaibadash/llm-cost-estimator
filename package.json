@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && touch docs/.nojekyll && cp public/.nojekyll docs/ &&  gh-pages -d docs -b gh-pages && rm -rf docs/.nojekyll"
+    "deploy": "next build && mkdir -p docs && cp -r out/* docs/ && touch docs/.nojekyll && cp public/.nojekyll docs/ && gh-pages -d docs -b gh-pages && rm -rf docs/.nojekyll"
   },
   "dependencies": {
     "csv-parser": "^3.2.0",
