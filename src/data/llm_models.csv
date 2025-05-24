@@ -9,6 +9,10 @@ Anthropic,Claude 3.5 Sonnet,0.003,0.015,https://www.anthropic.com/pricing
 Anthropic,Claude 3 Haiku,0.00025,0.00125,https://www.anthropic.com/pricing
 Anthropic,Claude 3.7 Sonnet,0.003,0.015,https://www.anthropic.com/pricing
 Anthropic,Claude 3.5 Haiku,0.0008,0.004,https://www.anthropic.com/pricing
+Anthropic,Claude Opus 4,0.015,0.075,https://www.anthropic.com/pricing
+Anthropic,Claude Sonnet 4,0.003,0.015,https://www.anthropic.com/pricing
+Anthropic,Claude Haiku 3,0.00025,0.00125,https://www.anthropic.com/pricing
+Anthropic,Claude Haiku 3.5,0.0008,0.004,https://www.anthropic.com/pricing
 Google,Gemini 1.5 Pro,0.0005,0.0015,https://ai.google.dev/pricing
 Google,Gemini 1.5 Flash,0.00025,0.0005,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash,0.15,0.60,https://ai.google.dev/pricing
