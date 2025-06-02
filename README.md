@@ -18,14 +18,14 @@ LLM Cost Estimator helps developers and organizations:
 ### Prerequisites
 
 - Node.js (version 16 or higher)
-- npm or yarn
+- npm
 
 ### Installation
 
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/llm-cost-estimator.git
+git clone git@github.com:kaibadash/llm-cost-estimator.git
 cd llm-cost-estimator
 ```
 
@@ -33,8 +33,6 @@ cd llm-cost-estimator
 
 ```bash
 npm install
-# or
-yarn install
 ```
 
 ### Running the Application
@@ -43,8 +41,6 @@ Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 The application should now be running at http://localhost:3000
@@ -70,13 +66,9 @@ The application uses a CSV file to store LLM model pricing data. To update or ad
 
    ```bash
    npm run build
-   # or
-   yarn build
    ```
 
 4. For production deployment, use:
    ```bash
    npm run deploy
-   # or
-   yarn deploy
    ```
