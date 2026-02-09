@@ -1,18 +1,32 @@
 provider,model,input_price,output_price,pricing_url
+OpenAI,gpt-5.2,1.75,14.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5.1,1.25,10.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5,1.25,10.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5-mini,0.25,2.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5-nano,0.05,0.40,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5.2-chat-latest,1.75,14.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5.1-chat-latest,1.25,10.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5-chat-latest,1.25,10.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5.2-codex,1.75,14.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5.1-codex-max,1.25,10.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5.1-codex,1.25,10.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5-codex,1.25,10.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5.2-pro,21.00,168.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5-pro,15.00,120.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4.1,2.00,8.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4.1-mini,0.40,1.60,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4.1-nano,0.10,0.40,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4o,2.50,10.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4o-2024-05-13,5.00,15.00,https://platform.openai.com/docs/pricing
-OpenAI,gpt-4o-audio-preview,2.50,10.00,https://platform.openai.com/docs/pricing
-OpenAI,gpt-4o-realtime-preview,5.00,20.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4o-mini,0.15,0.60,https://platform.openai.com/docs/pricing
-OpenAI,gpt-4o-mini-audio-preview,0.15,0.60,https://platform.openai.com/docs/pricing
+OpenAI,gpt-realtime,4.00,16.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-realtime-mini,0.60,2.40,https://platform.openai.com/docs/pricing
+OpenAI,gpt-4o-realtime-preview,5.00,20.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4o-mini-realtime-preview,0.60,2.40,https://platform.openai.com/docs/pricing
+OpenAI,gpt-audio,2.50,10.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-audio-mini,0.60,2.40,https://platform.openai.com/docs/pricing
+OpenAI,gpt-4o-audio-preview,2.50,10.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-4o-mini-audio-preview,0.15,0.60,https://platform.openai.com/docs/pricing
 OpenAI,o1,15.00,60.00,https://platform.openai.com/docs/pricing
 OpenAI,o1-pro,150.00,600.00,https://platform.openai.com/docs/pricing
 OpenAI,o3-pro,20.00,80.00,https://platform.openai.com/docs/pricing
@@ -22,30 +36,36 @@ OpenAI,o4-mini,1.10,4.40,https://platform.openai.com/docs/pricing
 OpenAI,o4-mini-deep-research,2.00,8.00,https://platform.openai.com/docs/pricing
 OpenAI,o3-mini,1.10,4.40,https://platform.openai.com/docs/pricing
 OpenAI,o1-mini,1.10,4.40,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5.1-codex-mini,0.25,2.00,https://platform.openai.com/docs/pricing
 OpenAI,codex-mini-latest,1.50,6.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-5-search-api,1.25,10.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4o-mini-search-preview,0.15,0.60,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4o-search-preview,2.50,10.00,https://platform.openai.com/docs/pricing
 OpenAI,computer-use-preview,3.00,12.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-image-1.5,5.00,10.00,https://platform.openai.com/docs/pricing
+OpenAI,chatgpt-image-latest,5.00,10.00,https://platform.openai.com/docs/pricing
 OpenAI,gpt-image-1,5.00,-,https://platform.openai.com/docs/pricing
-Anthropic,Claude 3 Opus,0.015,0.075,https://www.anthropic.com/pricing
-Anthropic,Claude 3.5 Sonnet,0.003,0.015,https://www.anthropic.com/pricing
-Anthropic,Claude 3 Haiku,0.00025,0.00125,https://www.anthropic.com/pricing
-Anthropic,Claude 3.7 Sonnet,0.003,0.015,https://www.anthropic.com/pricing
-Anthropic,Claude 3.5 Haiku,0.0008,0.004,https://www.anthropic.com/pricing
-Anthropic,Claude Opus 4,0.015,0.075,https://www.anthropic.com/pricing
-Anthropic,Claude Sonnet 4,0.003,0.015,https://www.anthropic.com/pricing
-Anthropic,Claude Haiku 3,0.00025,0.00125,https://www.anthropic.com/pricing
-Anthropic,Claude Haiku 3.5,0.0008,0.004,https://www.anthropic.com/pricing
-Google,Gemini 1.5 Pro,1.25,5.00,https://ai.google.dev/pricing
-Google,Gemini 1.5 Flash,0.075,0.30,https://ai.google.dev/pricing
-Google,Gemini 1.5 Flash-8B,0.0375,0.15,https://ai.google.dev/pricing
+OpenAI,gpt-image-1-mini,2.00,-,https://platform.openai.com/docs/pricing
+OpenAI,gpt-4o-mini-tts,0.60,-,https://platform.openai.com/docs/pricing
+OpenAI,gpt-4o-transcribe,2.50,10.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-4o-transcribe-diarize,2.50,10.00,https://platform.openai.com/docs/pricing
+OpenAI,gpt-4o-mini-transcribe,1.25,5.00,https://platform.openai.com/docs/pricing
+Anthropic,Claude Opus 4.6,5.00,25.00,https://www.anthropic.com/pricing
+Anthropic,Claude Sonnet 4.5,3.00,15.00,https://www.anthropic.com/pricing
+Anthropic,Claude Haiku 4.5,1.00,5.00,https://www.anthropic.com/pricing
+Anthropic,Claude Opus 4.5,5.00,25.00,https://www.anthropic.com/pricing
+Anthropic,Claude Opus 4.1,15.00,75.00,https://www.anthropic.com/pricing
+Anthropic,Claude Sonnet 4,3.00,15.00,https://www.anthropic.com/pricing
+Anthropic,Claude Opus 4,15.00,75.00,https://www.anthropic.com/pricing
+Anthropic,Claude Haiku 3,0.25,1.25,https://www.anthropic.com/pricing
+Google,Gemini 3 Pro Preview,2.00,12.00,https://ai.google.dev/pricing
+Google,Gemini 3 Flash Preview,0.50,3.00,https://ai.google.dev/pricing
 Google,Gemini 2.5 Pro,1.25,10.00,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash,0.30,2.50,https://ai.google.dev/pricing
+Google,Gemini 2.5 Flash Preview,0.30,2.50,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash-Lite,0.10,0.40,https://ai.google.dev/pricing
-Google,Gemini 2.5 Flash Native Audio,0.50,2.00,https://ai.google.dev/pricing
-Google,Gemini 2.5 Flash Preview TTS,0.50,10.00,https://ai.google.dev/pricing
-Google,Gemini 2.5 Pro Preview TTS,1.00,20.00,https://ai.google.dev/pricing
+Google,Gemini 2.5 Flash-Lite Preview,0.10,0.40,https://ai.google.dev/pricing
 Google,Gemini 2.0 Flash,0.10,0.40,https://ai.google.dev/pricing
 Google,Gemini 2.0 Flash-Lite,0.075,0.30,https://ai.google.dev/pricing
-DeepSeek,deepseek-chat,0.27,1.10,https://platform.deepseek.com/pricing
-DeepSeek,deepseek-reasoner,0.55,2.19,https://platform.deepseek.com/pricing
+DeepSeek,deepseek-chat,0.28,0.42,https://api-docs.deepseek.com/quick_start/pricing
+DeepSeek,deepseek-reasoner,0.28,0.42,https://api-docs.deepseek.com/quick_start/pricing
