@@ -29,23 +29,29 @@ Read `src/data/llm_models.csv` to understand the current list of providers and m
 Use WebFetch to retrieve the latest pricing information from the following URLs in parallel:
 
 - **OpenAI**: https://platform.openai.com/docs/pricing
+  - If the primary URL returns 403 (Cloudflare challenge), fall back to https://developers.openai.com/api/docs/pricing — it serves the same content and is fetchable.
   - Extract API prices (per 1M tokens) from the "Language models" section
   - Use standard API prices, not Batch API prices
   - Exclude models explicitly marked as deprecated/legacy
   - Include audio, realtime, search, computer-use, and image models
+  - For multi-modality models (realtime, image), use the **text** input/output price for the CSV (audio/image pricing is tracked separately)
 
 - **Anthropic**: https://www.anthropic.com/pricing
-  - Extract model prices (per 1M tokens) from the API section
+  - This URL now 301-redirects to https://claude.com/pricing, which does not include the API pricing table. Use the docs URL directly: https://platform.claude.com/docs/en/about-claude/pricing
+  - Extract from the "Model pricing" table (Base Input Tokens column = input, Output Tokens column = output)
   - If prices are shown in MTok notation, they are already in per-1M-token units
 
 - **Google**: https://ai.google.dev/pricing
   - Extract Gemini model prices (per 1M tokens)
   - Use Pay-as-you-go prices, not the free tier
   - Use the price for prompts up to 128K tokens when tiered pricing exists
+  - For Live/multi-modal preview models with both text and audio rates, use the **text** rate
 
-- **DeepSeek**: https://platform.deepseek.com/pricing (or https://api-docs.deepseek.com/quick_start/pricing)
+- **DeepSeek**: https://api-docs.deepseek.com/quick_start/pricing (preferred; https://platform.deepseek.com/pricing requires login)
   - Extract API prices (per 1M tokens)
   - Use standard prices, not cache hit prices
+  - If a promotional discount is currently active, record the regular (post-discount) list price, not the promo price
+  - Skip models the page marks as "will be deprecated" — list only the current/replacement model names
 
 ### 3. Update the CSV
 
