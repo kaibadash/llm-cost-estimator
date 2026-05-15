@@ -59,7 +59,7 @@ Based on the fetched information, perform the following:
 
 - **Add new models**: Add models that exist on the official page but are missing from the CSV. Group models by provider.
 - **Update prices**: Update `input_price` / `output_price` for models whose prices have changed.
-- **Remove deleted models**: Remove rows for models that have been discontinued from the official page.
+- **Remove deprecated or deleted models**: Remove rows for models that have been discontinued from the official page.
 - Maintain the existing provider order (OpenAI → Anthropic → Google → DeepSeek).
 - Order models within each provider according to the official page listing order.
 
