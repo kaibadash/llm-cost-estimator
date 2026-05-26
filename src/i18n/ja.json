@@ -14,6 +14,8 @@
     "model": "モデル",
     "inputPrice": "入力価格（1,000トークンあたり）",
     "outputPrice": "出力価格（1,000トークンあたり）",
+    "maxInputTokens": "最大入力トークン数",
+    "maxOutputTokens": "最大出力トークン数",
     "estimatedCost": "推定コスト（USD）",
     "pricingLink": "価格詳細",
     "inputTokens": "入力トークン数",

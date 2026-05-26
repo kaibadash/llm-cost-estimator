@@ -8,7 +8,7 @@ interface ResultsTableProps {
   translations: TranslationStrings;
 }
 
-type SortKey = 'provider' | 'model' | 'inputPrice' | 'outputPrice' | 'estimatedCost';
+type SortKey = 'provider' | 'model' | 'inputPrice' | 'outputPrice' | 'maxInputTokens' | 'maxOutputTokens' | 'estimatedCost';
 type SortDirection = 'asc' | 'desc';
 
 export default function ResultsTable({ results, translations }: ResultsTableProps) {
@@ -44,6 +44,14 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
       case 'outputPrice':
         aValue = a.output_price;
         bValue = b.output_price;
+        break;
+      case 'maxInputTokens':
+        aValue = a.max_input_tokens ?? -1;
+        bValue = b.max_input_tokens ?? -1;
+        break;
+      case 'maxOutputTokens':
+        aValue = a.max_output_tokens ?? -1;
+        bValue = b.max_output_tokens ?? -1;
         break;
       case 'estimatedCost':
         aValue = a.estimatedCost;
@@ -107,8 +115,8 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
                   <span className="ml-1">{sortDirection === 'asc' ? '↑' : '↓'}</span>
                 )}
               </th>
-              <th 
-                scope="col" 
+              <th
+                scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
                 onClick={() => handleSort('outputPrice')}
               >
@@ -117,8 +125,28 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
                   <span className="ml-1">{sortDirection === 'asc' ? '↑' : '↓'}</span>
                 )}
               </th>
-              <th 
-                scope="col" 
+              <th
+                scope="col"
+                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                onClick={() => handleSort('maxInputTokens')}
+              >
+                {translations.resultsSection.maxInputTokens}
+                {sortKey === 'maxInputTokens' && (
+                  <span className="ml-1">{sortDirection === 'asc' ? '↑' : '↓'}</span>
+                )}
+              </th>
+              <th
+                scope="col"
+                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                onClick={() => handleSort('maxOutputTokens')}
+              >
+                {translations.resultsSection.maxOutputTokens}
+                {sortKey === 'maxOutputTokens' && (
+                  <span className="ml-1">{sortDirection === 'asc' ? '↑' : '↓'}</span>
+                )}
+              </th>
+              <th
+                scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
                 onClick={() => handleSort('estimatedCost')}
               >
@@ -139,6 +167,8 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{result.model}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${result.input_price.toFixed(6)}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${result.output_price.toFixed(6)}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{result.max_input_tokens != null ? result.max_input_tokens.toLocaleString() : '—'}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{result.max_output_tokens != null ? result.max_output_tokens.toLocaleString() : '—'}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${result.estimatedCost.toFixed(4)}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-600">
                   <a href={result.pricing_url} target="_blank" rel="noopener noreferrer">

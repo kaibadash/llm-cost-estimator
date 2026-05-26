@@ -5,6 +5,8 @@ export interface LLMModel {
   model: string;
   input_price: number;
   output_price: number;
+  max_input_tokens: number | null;
+  max_output_tokens: number | null;
   pricing_url: string;
 }
 
@@ -31,6 +33,8 @@ export interface TranslationStrings {
     model: string;
     inputPrice: string;
     outputPrice: string;
+    maxInputTokens: string;
+    maxOutputTokens: string;
     estimatedCost: string;
     pricingLink: string;
     inputTokens: string;
