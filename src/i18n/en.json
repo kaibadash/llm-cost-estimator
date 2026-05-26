@@ -14,6 +14,8 @@
     "model": "Model",
     "inputPrice": "Input Price (per 1K tokens)",
     "outputPrice": "Output Price (per 1K tokens)",
+    "maxInputTokens": "Max Input Tokens",
+    "maxOutputTokens": "Max Output Tokens",
     "estimatedCost": "Estimated Cost (USD)",
     "pricingLink": "Pricing Details",
     "inputTokens": "Input Tokens",
