@@ -25,8 +25,9 @@ Anthropic,Claude Opus 4.1,15.00,75.00,https://www.anthropic.com/pricing
 Anthropic,Claude Sonnet 4.6,3.00,15.00,https://www.anthropic.com/pricing
 Anthropic,Claude Sonnet 4.5,3.00,15.00,https://www.anthropic.com/pricing
 Anthropic,Claude Haiku 4.5,1.00,5.00,https://www.anthropic.com/pricing
-Google,Gemini 3.1 Pro Preview,2.00,12.00,https://ai.google.dev/pricing
+Google,Gemini 3.5 Flash,1.50,9.00,https://ai.google.dev/pricing
 Google,Gemini 3.1 Flash-Lite,0.25,1.50,https://ai.google.dev/pricing
+Google,Gemini 3.1 Pro Preview,2.00,12.00,https://ai.google.dev/pricing
 Google,Gemini 3.1 Flash-Lite Preview,0.25,1.50,https://ai.google.dev/pricing
 Google,Gemini 3.1 Flash Live Preview,0.75,4.50,https://ai.google.dev/pricing
 Google,Gemini 3 Flash Preview,0.50,3.00,https://ai.google.dev/pricing
@@ -34,5 +35,6 @@ Google,Gemini 2.5 Pro,1.25,10.00,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash,0.30,2.50,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash-Lite,0.10,0.40,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash-Lite Preview,0.10,0.40,https://ai.google.dev/pricing
+Google,Gemini 2.5 Flash Native Audio,0.50,2.00,https://ai.google.dev/pricing
 DeepSeek,deepseek-v4-flash,0.14,0.28,https://api-docs.deepseek.com/quick_start/pricing
 DeepSeek,deepseek-v4-pro,1.74,3.48,https://api-docs.deepseek.com/quick_start/pricing
