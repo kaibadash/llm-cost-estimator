@@ -11,10 +11,11 @@ Update `src/data/llm_models.csv` with the latest pricing information from each p
 ## CSV Format
 
 ```
-provider,model,input_price,output_price,pricing_url
+provider,model,input_price,output_price,max_input_tokens,max_output_tokens,pricing_url
 ```
 
 - `input_price` / `output_price`: USD per 1M tokens
+- `max_input_tokens` / `max_output_tokens`: integer token counts (no commas, no `K`/`M` suffix). Use `-` when not applicable (e.g., image-generation models) or when the spec cannot be confirmed from official docs.
 - `pricing_url`: The provider's official pricing page URL
 - Use `-` for `output_price` when it does not apply (e.g., image generation models)
 
@@ -53,22 +54,35 @@ Use WebFetch to retrieve the latest pricing information from the following URLs 
   - If a promotional discount is currently active, record the regular (post-discount) list price, not the promo price
   - Skip models the page marks as "will be deprecated" — list only the current/replacement model names
 
-### 3. Update the CSV
+### 3. Fetch model specs (context window / max output tokens)
+
+Pricing pages do not include token limits for OpenAI, Anthropic, or Google — fetch from each provider's model documentation. DeepSeek's pricing page already contains them.
+
+- **OpenAI**: per-model pages under `https://developers.openai.com/api/docs/models/<model>` (e.g. `.../models/gpt-5.5`, `.../models/gpt-realtime-2`). Each page has "Context Window" and "Max Output Tokens". Image-generation models (`gpt-image-*`) do not publish these — use `-`.
+- **Anthropic**: the comparison tables on `https://docs.claude.com/en/docs/about-claude/models/overview` (which redirects to `https://platform.claude.com/docs/en/about-claude/models/overview`). Read the "Context window" and "Max output" rows. Both the "Latest models comparison" and "Legacy models" tables are needed to cover all non-deprecated models.
+- **Google**: per-model pages under `https://ai.google.dev/gemini-api/docs/models/<model-slug>` (e.g. `.../models/gemini-3.5-flash`, `.../models/gemini-2.5-pro`). Each page has "Input token limit" and "Output token limit". Note that slug conventions are inconsistent — some Preview variants and Live/Native-Audio models do not have individual pages; use `-` if not found.
+- **DeepSeek**: already on the pricing page — "Max context length" → `max_input_tokens`, "MAXIMUM" output → `max_output_tokens`.
+
+When a Preview variant lacks its own page, assume the same limits as the non-Preview variant of the same model family (and note this in the change report).
+
+### 4. Update the CSV
 
 Based on the fetched information, perform the following:
 
 - **Add new models**: Add models that exist on the official page but are missing from the CSV. Group models by provider.
 - **Update prices**: Update `input_price` / `output_price` for models whose prices have changed.
+- **Update token limits**: Update `max_input_tokens` / `max_output_tokens` when the spec changes.
 - **Remove deprecated or deleted models**: Remove rows for models that have been discontinued from the official page.
 - Maintain the existing provider order (OpenAI → Anthropic → Google → DeepSeek).
 - Order models within each provider according to the official page listing order.
 
-### 4. Report changes
+### 5. Report changes
 
 After the update is complete, report the following to the user:
 
-- List of newly added models
+- List of newly added models (include the token limits used and whether they were inferred from a sibling model)
 - List of models with price changes (old price → new price)
+- List of models with token-limit changes (old → new)
 - List of removed models
 - If no changes were made, report that as well
 
