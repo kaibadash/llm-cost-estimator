@@ -1,15 +1,17 @@
-import { Tiktoken } from 'js-tiktoken';
+import type { Tiktoken } from 'js-tiktoken/lite';
 
 let tokenizer: Tiktoken | null = null;
 
 // Initialize class for token calculation
 async function initTokenizer() {
   if (!tokenizer) {
-    const { Tiktoken } = await import('js-tiktoken');
-    tokenizer = new Tiktoken(
-      // cl100k_base is the encoding used by latest models like GPT-4, GPT-3.5-Turbo
-      'cl100k_base'
-    );
+    const [{ Tiktoken }, { default: cl100k_base }] = await Promise.all([
+      import('js-tiktoken/lite'),
+      import('js-tiktoken/ranks/cl100k_base'),
+    ]);
+    // cl100k_base is the encoding used by GPT-4 / GPT-3.5-Turbo.
+    // The constructor expects a TiktokenBPE rank object, not the encoding name.
+    tokenizer = new Tiktoken(cl100k_base);
   }
   return tokenizer;
 }
