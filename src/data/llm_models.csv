@@ -18,10 +18,12 @@ OpenAI,o4-mini-deep-research,1.00,4.00,200000,100000,https://platform.openai.com
 OpenAI,computer-use-preview,1.50,6.00,8192,1024,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4o-transcribe,2.50,10.00,16000,2000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-4o-mini-transcribe,1.25,5.00,16000,2000,https://platform.openai.com/docs/pricing
+Anthropic,Claude Fable 5,10.00,50.00,1000000,128000,https://www.anthropic.com/pricing
+Anthropic,Claude Mythos 5,10.00,50.00,1000000,128000,https://www.anthropic.com/pricing
+Anthropic,Claude Opus 4.8,5.00,25.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 4.7,5.00,25.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 4.6,5.00,25.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 4.5,5.00,25.00,200000,64000,https://www.anthropic.com/pricing
-Anthropic,Claude Opus 4.1,15.00,75.00,200000,32000,https://www.anthropic.com/pricing
 Anthropic,Claude Sonnet 4.6,3.00,15.00,1000000,64000,https://www.anthropic.com/pricing
 Anthropic,Claude Sonnet 4.5,3.00,15.00,200000,64000,https://www.anthropic.com/pricing
 Anthropic,Claude Haiku 4.5,1.00,5.00,200000,64000,https://www.anthropic.com/pricing
@@ -37,4 +39,4 @@ Google,Gemini 2.5 Flash-Lite,0.10,0.40,1048576,65536,https://ai.google.dev/prici
 Google,Gemini 2.5 Flash-Lite Preview,0.10,0.40,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash Native Audio,0.50,2.00,-,-,https://ai.google.dev/pricing
 DeepSeek,deepseek-v4-flash,0.14,0.28,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
-DeepSeek,deepseek-v4-pro,1.74,3.48,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
+DeepSeek,deepseek-v4-pro,0.435,0.87,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
