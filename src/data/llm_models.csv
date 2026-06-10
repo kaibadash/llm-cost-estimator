@@ -7,17 +7,8 @@ OpenAI,gpt-5.4-nano,0.20,1.25,400000,128000,https://platform.openai.com/docs/pri
 OpenAI,gpt-5.4-pro,30.00,180.00,1050000,128000,https://platform.openai.com/docs/pricing
 OpenAI,chat-latest,5.00,30.00,400000,128000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5.3-codex,1.75,14.00,400000,128000,https://platform.openai.com/docs/pricing
-OpenAI,gpt-realtime-2,4.00,24.00,128000,32000,https://platform.openai.com/docs/pricing
-OpenAI,gpt-realtime-1.5,4.00,16.00,32000,4096,https://platform.openai.com/docs/pricing
-OpenAI,gpt-realtime-mini,0.60,2.40,32000,4096,https://platform.openai.com/docs/pricing
-OpenAI,gpt-image-2,5.00,-,-,-,https://platform.openai.com/docs/pricing
-OpenAI,gpt-image-1.5,5.00,10.00,-,-,https://platform.openai.com/docs/pricing
-OpenAI,gpt-image-1-mini,2.00,-,-,-,https://platform.openai.com/docs/pricing
 OpenAI,o3-deep-research,5.00,20.00,200000,100000,https://platform.openai.com/docs/pricing
 OpenAI,o4-mini-deep-research,1.00,4.00,200000,100000,https://platform.openai.com/docs/pricing
-OpenAI,computer-use-preview,1.50,6.00,8192,1024,https://platform.openai.com/docs/pricing
-OpenAI,gpt-4o-transcribe,2.50,10.00,16000,2000,https://platform.openai.com/docs/pricing
-OpenAI,gpt-4o-mini-transcribe,1.25,5.00,16000,2000,https://platform.openai.com/docs/pricing
 Anthropic,Claude Fable 5,10.00,50.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Mythos 5,10.00,50.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 4.8,5.00,25.00,1000000,128000,https://www.anthropic.com/pricing
@@ -31,12 +22,10 @@ Google,Gemini 3.5 Flash,1.50,9.00,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 3.1 Flash-Lite,0.25,1.50,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 3.1 Pro Preview,2.00,12.00,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 3.1 Flash-Lite Preview,0.25,1.50,1048576,65536,https://ai.google.dev/pricing
-Google,Gemini 3.1 Flash Live Preview,0.75,4.50,-,-,https://ai.google.dev/pricing
 Google,Gemini 3 Flash Preview,0.50,3.00,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 2.5 Pro,1.25,10.00,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash,0.30,2.50,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash-Lite,0.10,0.40,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash-Lite Preview,0.10,0.40,1048576,65536,https://ai.google.dev/pricing
-Google,Gemini 2.5 Flash Native Audio,0.50,2.00,-,-,https://ai.google.dev/pricing
 DeepSeek,deepseek-v4-flash,0.14,0.28,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
 DeepSeek,deepseek-v4-pro,0.435,0.87,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
