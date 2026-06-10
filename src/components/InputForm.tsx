@@ -16,9 +16,13 @@ export default function InputForm({ onCalculate, translations, inputTokens = 0, 
   const [outputText, setOutputText] = useState<string>('');
   const [requestCount, setRequestCount] = useState<number>(1);
 
-  // Automatically run calculation whenever input changes
+  // Automatically run calculation after the user stops typing for 1 second (debounce)
   useEffect(() => {
-    onCalculate(inputText, outputText, requestCount);
+    const timer = setTimeout(() => {
+      onCalculate(inputText, outputText, requestCount);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, [inputText, outputText, requestCount]); // Removed onCalculate from dependency array
 
   return (
