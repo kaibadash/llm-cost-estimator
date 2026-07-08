@@ -7,6 +7,8 @@ OpenAI,gpt-5.4-nano,0.20,1.25,400000,128000,https://platform.openai.com/docs/pri
 OpenAI,gpt-5.4-pro,30.00,180.00,1050000,128000,https://platform.openai.com/docs/pricing
 OpenAI,chat-latest,5.00,30.00,400000,128000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5.3-codex,1.75,14.00,400000,128000,https://platform.openai.com/docs/pricing
+OpenAI,gpt-realtime-2.1,4.00,24.00,128000,32000,https://platform.openai.com/docs/pricing
+OpenAI,gpt-realtime-2.1-mini,0.60,2.40,32000,4096,https://platform.openai.com/docs/pricing
 OpenAI,gpt-realtime-2,4.00,24.00,128000,32000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-realtime-1.5,4.00,16.00,32000,4096,https://platform.openai.com/docs/pricing
 OpenAI,gpt-realtime-mini,0.60,2.40,32000,4096,https://platform.openai.com/docs/pricing
