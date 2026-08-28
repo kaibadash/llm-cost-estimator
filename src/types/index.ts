@@ -26,6 +26,7 @@ export interface TranslationStrings {
     promptOutput: string;
     requestCount: string;
     calculate: string;
+    loadSample: string;
   };
   resultsSection: {
     title: string;
@@ -41,6 +42,7 @@ export interface TranslationStrings {
     outputTokens: string;
     totalTokens: string;
     sortBy: string;
+    calculating: string;
   };
   languageSelector: {
     label: string;

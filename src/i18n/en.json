@@ -6,6 +6,7 @@
     "promptInput": "Example Prompt (Input)",
     "promptOutput": "Example Response (Output)",
     "requestCount": "Number of Requests",
+    "loadSample": "Load Sample",
     "calculate": "Calculate"
   },
   "resultsSection": {
@@ -21,7 +22,8 @@
     "inputTokens": "Input Tokens",
     "outputTokens": "Output Tokens",
     "totalTokens": "Total Tokens",
-    "sortBy": "Sort by"
+    "sortBy": "Sort by",
+    "calculating": "Calculating..."
   },
   "languageSelector": {
     "label": "Language",
