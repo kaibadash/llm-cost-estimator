@@ -5,7 +5,7 @@ import InputForm from "@/components/InputForm";
 import ResultsTable from "@/components/ResultsTable";
 import LanguageSelector from "@/components/LanguageSelector";
 import { getModelData } from "@/utils/data";
-import { calculateCost } from "@/utils/tokenizer";
+import { countTokens, calculateCostFromTokens } from "@/utils/tokenizer";
 import { getDefaultLanguage, getTranslations } from "@/utils/i18n";
 import { Language, ModelCostEstimate } from "@/types";
 
@@ -13,6 +13,7 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>('en');
   const [translations, setTranslations] = useState(getTranslations(language));
   const [results, setResults] = useState<ModelCostEstimate[]>([]);
+  const [isCalculating, setIsCalculating] = useState(false);
   const [tokenCounts, setTokenCounts] = useState({
     inputTokens: 0,
     outputTokens: 0,
@@ -29,38 +30,34 @@ export default function Home() {
   }, [language]);
 
   const handleCalculate = async (inputText: string, outputText: string, requestCount: number) => {
-    const models = await getModelData();
-    
-    const costEstimates = await Promise.all(
-      models.map(async (model) => {
-        const { inputTokens, outputTokens, totalTokens, cost } = await calculateCost(
-          inputText,
-          outputText,
+    setIsCalculating(true);
+    try {
+      // トークン化はモデルに依存しないので入出力それぞれ1回だけ行う。
+      // モデルごとに数えると同じテキストをモデル数だけ encode することになる。
+      const [models, inputTokens, outputTokens] = await Promise.all([
+        getModelData(),
+        countTokens(inputText),
+        countTokens(outputText)
+      ]);
+      const totalTokens = inputTokens + outputTokens;
+
+      setTokenCounts({ inputTokens, outputTokens, totalTokens });
+      setResults(models.map((model) => ({
+        ...model,
+        inputTokens,
+        outputTokens,
+        totalTokens,
+        estimatedCost: calculateCostFromTokens(
+          inputTokens,
+          outputTokens,
           model.input_price,
           model.output_price,
           requestCount
-        );
-        
-        // Update token counts at the first calculation
-        if (model === models[0]) {
-          setTokenCounts({
-            inputTokens,
-            outputTokens,
-            totalTokens
-          });
-        }
-        
-        return {
-          ...model,
-          inputTokens,
-          outputTokens,
-          totalTokens,
-          estimatedCost: cost
-        };
-      })
-    );
-    
-    setResults(costEstimates);
+        )
+      })));
+    } finally {
+      setIsCalculating(false);
+    }
   };
 
   return (
@@ -86,10 +83,13 @@ export default function Home() {
             inputTokens={tokenCounts.inputTokens} 
             outputTokens={tokenCounts.outputTokens} 
             totalTokens={tokenCounts.totalTokens} 
+            isCalculating={isCalculating}
           />
           
           {results.length > 0 && (
-            <ResultsTable results={results} translations={translations} />
+            <div className={isCalculating ? 'opacity-50 transition-opacity' : 'transition-opacity'}>
+              <ResultsTable results={results} translations={translations} />
+            </div>
           )}
         </div>
       </main>

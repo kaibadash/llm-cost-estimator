@@ -6,6 +6,7 @@
     "promptInput": "プロンプト例（入力）",
     "promptOutput": "レスポンス例（出力）",
     "requestCount": "リクエスト回数",
+    "loadSample": "サンプルを入力",
     "calculate": "計算する"
   },
   "resultsSection": {
@@ -21,7 +22,8 @@
     "inputTokens": "入力トークン数",
     "outputTokens": "出力トークン数",
     "totalTokens": "合計トークン数",
-    "sortBy": "並び替え"
+    "sortBy": "並び替え",
+    "calculating": "計算中..."
   },
   "languageSelector": {
     "label": "言語",
