@@ -68,6 +68,14 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
         : bValue.localeCompare(aValue);
     }
 
+    // 価格が '-' の行は parseFloat で NaN になり、そのまま引き算すると比較結果も NaN になって並びが崩れる。
+    // 昇順・降順どちらでも邪魔にならないよう、方向を反転させる前に末尾へ固定する
+    const aIsNaN = Number.isNaN(aValue);
+    const bIsNaN = Number.isNaN(bValue);
+    if (aIsNaN || bIsNaN) {
+      return aIsNaN === bIsNaN ? 0 : aIsNaN ? 1 : -1;
+    }
+
     return sortDirection === 'asc'
       ? (aValue as number) - (bValue as number)
       : (bValue as number) - (aValue as number);
