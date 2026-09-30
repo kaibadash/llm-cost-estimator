@@ -59,3 +59,59 @@ Kimi,kimi-k3,3.00,15.00,1048576,1048576,https://platform.kimi.ai/docs/pricing/ch
 Kimi,kimi-k2.7-code,0.95,4.00,262144,-,https://platform.kimi.ai/docs/pricing/chat
 Kimi,kimi-k2.7-code-highspeed,1.90,8.00,262144,-,https://platform.kimi.ai/docs/pricing/chat
 Kimi,kimi-k2.6,0.95,4.00,262144,-,https://platform.kimi.ai/docs/pricing/chat
+Bedrock(Anthropic),Claude Fable 5.1,10.00,50.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Mythos 5.1,10.00,50.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Opus 5,5.00,25.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Sonnet 5,2.00,10.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Fable 5,10.00,50.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Opus 4.8,5.00,25.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Opus 4.7,5.00,25.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Opus 4.6,5.00,25.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Opus 4.5,5.00,25.00,200000,64000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Sonnet 4.6,3.00,15.00,1000000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Sonnet 4.5,3.00,15.00,200000,64000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Anthropic),Claude Haiku 4.5,1.00,5.00,200000,64000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(OpenAI),GPT-6 Astra,10.00,50.00,1050000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(OpenAI),GPT-5.6 Sol,4.00,20.00,1050000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(OpenAI),GPT-5.6 Terra,2.00,12.00,1050000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(OpenAI),GPT-5.6 Luna,0.20,1.20,1050000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(OpenAI),GPT-5.5,5.50,33.00,1050000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(OpenAI),GPT-5.4,2.75,16.50,1050000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(OpenAI),gpt-oss-120b,0.15,0.60,128000,16000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(OpenAI),gpt-oss-20b,0.07,0.30,128000,16000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Amazon),Amazon Nova 2 Pro (Preview),1.25,10.00,-,-,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Amazon),Amazon Nova 2 Omni (Preview),0.30,2.50,-,-,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Amazon),Amazon Nova 2 Lite,0.30,2.50,1000000,65536,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Amazon),Amazon Nova Premier,2.50,12.50,1000000,25000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Amazon),Amazon Nova Pro,0.80,3.20,300000,5000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Amazon),Amazon Nova Lite,0.06,0.24,300000,5000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Amazon),Amazon Nova Micro,0.035,0.14,128000,5000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(xAI),Grok 4.6,2.00,6.00,500000,-,https://aws.amazon.com/bedrock/pricing/
+Bedrock(xAI),Grok 4.3,1.25,2.50,1000000,131072,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Meta),Llama 4 Maverick 17B,0.24,0.97,1000000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Meta),Llama 4 Scout 17B,0.17,0.66,10000000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Google),Gemma 4 31B,0.14,0.40,256000,-,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Google),Gemma 4 26B A4B,0.13,0.40,256000,-,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Google),Gemma 4 E2B,0.04,0.08,128000,-,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Mistral),Mistral Large 3,0.50,1.50,256000,32000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Mistral),Devstral 2 123B,0.40,2.00,256000,32000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Mistral),Magistral Small 1.2,0.50,1.50,128000,40000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Mistral),Ministral 14B 3.0,0.20,0.20,128000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Mistral),Ministral 8B 3.0,0.15,0.15,128000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Mistral),Ministral 3B 3.0,0.10,0.10,128000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(DeepSeek),DeepSeek v3.2,0.62,1.85,164000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Kimi),Kimi K2.5,0.60,3.00,256000,16000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Kimi),Kimi K2 Thinking,0.60,2.50,256000,16000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Qwen),Qwen3 VL 235B A22B,0.53,2.66,256000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Qwen),Qwen3 Coder Next,0.50,1.20,256000,16000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Qwen),Qwen3 Next 80B A3B,0.14,1.20,256000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Qwen),Qwen3 32B,0.15,0.60,32000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Qwen),Qwen3 Coder 30B A3B,0.15,0.60,256000,16000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Z AI),GLM 5,1.00,3.20,200000,128000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Z AI),GLM 4.7,0.60,2.20,203000,4000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(Z AI),GLM 4.7 Flash,0.07,0.40,203000,4000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(MiniMax),MiniMax M2.5,0.30,1.20,196000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(MiniMax),MiniMax M2.1,0.30,1.20,196000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(MiniMax),MiniMax M2,0.30,1.20,1000000,8000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(NVIDIA),NVIDIA Nemotron 3 Super 120B A12B,0.15,0.65,256000,32000,https://aws.amazon.com/bedrock/pricing/
+Bedrock(NVIDIA),NVIDIA Nemotron 3 Nano 30B A3B,0.06,0.24,256000,8000,https://aws.amazon.com/bedrock/pricing/
