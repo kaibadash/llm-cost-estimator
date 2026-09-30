@@ -1,4 +1,8 @@
 provider,model,input_price,output_price,max_input_tokens,max_output_tokens,pricing_url
+OpenAI,gpt-6-astra,10.00,50.00,1050000,128000,https://platform.openai.com/docs/pricing
+OpenAI,gpt-6.1-sol,2.00,10.00,1050000,128000,https://platform.openai.com/docs/pricing
+OpenAI,gpt-6-luna,0.10,0.50,1050000,128000,https://platform.openai.com/docs/pricing
+OpenAI,gpt-6-sol,2.00,10.00,1050000,128000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5.6-sol,4.00,20.00,1050000,128000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5.6-terra,2.00,12.00,1050000,128000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5.6-luna,0.20,1.20,1050000,128000,https://platform.openai.com/docs/pricing
@@ -12,11 +16,14 @@ OpenAI,gpt-5.4-nano,0.20,1.25,400000,128000,https://platform.openai.com/docs/pri
 OpenAI,gpt-5.4-pro,30.00,180.00,1050000,128000,https://platform.openai.com/docs/pricing
 OpenAI,chat-latest,5.00,30.00,400000,128000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-5.3-codex,1.75,14.00,400000,128000,https://platform.openai.com/docs/pricing
+OpenAI,gpt-rosalind-research,5.00,25.00,-,-,https://platform.openai.com/docs/pricing
 OpenAI,gpt-realtime-2.1,4.00,24.00,128000,32000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-realtime-2.1-mini,0.60,2.40,128000,32000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-realtime-2,4.00,24.00,128000,32000,https://platform.openai.com/docs/pricing
 OpenAI,gpt-realtime-1.5,4.00,16.00,32000,4096,https://platform.openai.com/docs/pricing
 OpenAI,gpt-realtime-mini,0.60,2.40,32000,4096,https://platform.openai.com/docs/pricing
+OpenAI,gpt-image-2.5-sunburst,5.00,-,-,-,https://platform.openai.com/docs/pricing
+OpenAI,gpt-image-2.5-flare,5.00,-,-,-,https://platform.openai.com/docs/pricing
 OpenAI,gpt-image-2,5.00,-,-,-,https://platform.openai.com/docs/pricing
 OpenAI,gpt-image-1.5,5.00,10.00,-,-,https://platform.openai.com/docs/pricing
 OpenAI,gpt-image-1-mini,2.00,-,-,-,https://platform.openai.com/docs/pricing
@@ -29,11 +36,13 @@ Anthropic,Claude Fable 5.1,10.00,50.00,1000000,128000,https://www.anthropic.com/
 Anthropic,Claude Mythos 5.1,10.00,50.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Fable 5,10.00,50.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Mythos 5,10.00,50.00,1000000,128000,https://www.anthropic.com/pricing
+Anthropic,Claude Opus 5.5,4.00,20.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 5,5.00,25.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 4.8,5.00,25.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 4.7,5.00,25.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 4.6,5.00,25.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Opus 4.5,5.00,25.00,200000,64000,https://www.anthropic.com/pricing
+Anthropic,Claude Sonnet 5.5,2.00,10.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Sonnet 5,2.00,10.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Sonnet 4.6,3.00,15.00,1000000,128000,https://www.anthropic.com/pricing
 Anthropic,Claude Sonnet 4.5,3.00,15.00,200000,64000,https://www.anthropic.com/pricing
@@ -45,6 +54,8 @@ Google,Gemini 3.5 Flash,1.50,9.00,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 3.5 Flash-Lite,0.30,2.50,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 3.1 Flash-Lite,0.25,1.50,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 3.1 Pro Preview,2.00,12.00,1048576,65536,https://ai.google.dev/pricing
+Google,Gemini 3.8 Live,0.75,4.50,131072,65536,https://ai.google.dev/pricing
+Google,Gemini 3.8 Live Extended Thinking,0.75,4.50,131072,65536,https://ai.google.dev/pricing
 Google,Gemini 3.1 Flash Live Preview,0.75,4.50,131072,65536,https://ai.google.dev/pricing
 Google,Gemini 3 Flash Preview,0.50,3.00,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 2.5 Pro,1.25,10.00,1048576,65536,https://ai.google.dev/pricing
@@ -52,13 +63,12 @@ Google,Gemini 2.5 Flash,0.30,2.50,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash-Lite,0.10,0.40,1048576,65536,https://ai.google.dev/pricing
 Google,Gemini 2.5 Computer Use Preview,1.25,10.00,128000,64000,https://ai.google.dev/pricing
 Google,Gemini 2.5 Flash Native Audio,0.50,2.00,131072,8192,https://ai.google.dev/pricing
-DeepSeek(peak),deepseek-v4-flash,0.44,1.32,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
+DeepSeek(peak),deepseek-flash,0.30,1.20,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
 DeepSeek(peak),deepseek-v4-pro,1.32,3.96,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
-DeepSeek(peak),deepseek-v4-flash-vision-exp,0.44,1.32,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
-DeepSeek(off-peak),deepseek-v4-flash,0.22,0.66,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
+DeepSeek(off-peak),deepseek-flash,0.15,0.60,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
 DeepSeek(off-peak),deepseek-v4-pro,0.66,1.98,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
-DeepSeek(off-peak),deepseek-v4-flash-vision-exp,0.22,0.66,1000000,384000,https://api-docs.deepseek.com/quick_start/pricing
 Kimi,kimi-k3,3.00,15.00,1048576,1048576,https://platform.kimi.ai/docs/pricing/chat
 Kimi,kimi-k2.7-code,0.95,4.00,262144,-,https://platform.kimi.ai/docs/pricing/chat
 Kimi,kimi-k2.7-code-highspeed,1.90,8.00,262144,-,https://platform.kimi.ai/docs/pricing/chat
 Kimi,kimi-k2.6,0.95,4.00,262144,-,https://platform.kimi.ai/docs/pricing/chat
+TypeSafe,jev-1.13.0,0.042,0.00,64000,-,https://docs.typesafe.ai/models
