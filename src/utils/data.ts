@@ -11,6 +11,12 @@ function parseTokenLimit(value: string): number | null {
   return Number.isFinite(n) ? n : null;
 }
 
+// 廃止告知はあるが停止日が未発表のモデルもあるため、列は日付専用にせず `yes` も受け付ける
+function parseDeprecated(value: string | undefined): { deprecated: boolean; shutdown_date: string | null } {
+  if (!value || value === '-') return { deprecated: false, shutdown_date: null };
+  return { deprecated: true, shutdown_date: /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : null };
+}
+
 export async function getModelData(): Promise<LLMModel[]> {
   try {
     // Parse and return CSV data
@@ -24,7 +30,8 @@ export async function getModelData(): Promise<LLMModel[]> {
         output_price: parseFloat(values[3]),
         max_input_tokens: parseTokenLimit(values[4]),
         max_output_tokens: parseTokenLimit(values[5]),
-        pricing_url: values[6]
+        pricing_url: values[6],
+        ...parseDeprecated(values[7])
       };
     });
   } catch (error) {

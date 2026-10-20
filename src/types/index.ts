@@ -8,6 +8,8 @@ export interface LLMModel {
   max_input_tokens: number | null;
   max_output_tokens: number | null;
   pricing_url: string;
+  deprecated: boolean;
+  shutdown_date: string | null;
 }
 
 export interface ModelCostEstimate extends LLMModel {
@@ -36,6 +38,8 @@ export interface TranslationStrings {
     outputPrice: string;
     maxInputTokens: string;
     maxOutputTokens: string;
+    shutdownDate: string;
+    deprecatedDateUnknown: string;
     estimatedCost: string;
     pricingLink: string;
     inputTokens: string;

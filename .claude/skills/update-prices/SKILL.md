@@ -11,13 +11,16 @@ Update `src/data/llm_models.csv` with the latest pricing information from each p
 ## CSV Format
 
 ```
-provider,model,input_price,output_price,max_input_tokens,max_output_tokens,pricing_url
+provider,model,input_price,output_price,max_input_tokens,max_output_tokens,pricing_url,deprecated
 ```
 
 - `input_price` / `output_price`: USD per 1M tokens
 - `max_input_tokens` / `max_output_tokens`: integer token counts (no commas, no `K`/`M` suffix). Use `-` when not applicable (e.g., image-generation models) or when the spec cannot be confirmed from official docs.
 - `pricing_url`: The provider's official pricing page URL
 - Use `-` for `output_price` when it does not apply (e.g., image generation models)
+- `deprecated`: `-` when not deprecated; the shutdown date as `YYYY-MM-DD` when the provider has announced one; `yes` when deprecated but no shutdown date is published.
+  - Deprecated models stay in the CSV until their shutdown date so users can compare them with the recommended replacement. Remove the row once the shutdown date has passed.
+  - Sources: OpenAI https://developers.openai.com/api/docs/deprecations (both "Upcoming" and "Past" sections), Anthropic https://platform.claude.com/docs/en/about-claude/model-deprecations, Google https://ai.google.dev/gemini-api/docs/deprecations
 
 ## Steps
 
@@ -33,7 +36,7 @@ Use WebFetch to retrieve the latest pricing information from the following URLs 
   - If the primary URL returns 403 (Cloudflare challenge), fall back to https://developers.openai.com/api/docs/pricing — it serves the same content and is fetchable.
   - Extract API prices (per 1M tokens) from the "Language models" section
   - Use standard API prices, not Batch API prices
-  - Exclude models explicitly marked as deprecated/legacy
+  - Keep models marked as deprecated, filling the `deprecated` column with the shutdown date from the deprecations page
   - Include audio, realtime, search, computer-use, and image models
   - For multi-modality models (realtime, image), use the **text** input/output price for the CSV (audio/image pricing is tracked separately)
 
@@ -52,7 +55,7 @@ Use WebFetch to retrieve the latest pricing information from the following URLs 
   - Extract API prices (per 1M tokens)
   - Use standard prices, not cache hit prices
   - If a promotional discount is currently active, record the regular (post-discount) list price, not the promo price
-  - Skip models the page marks as "will be deprecated" — list only the current/replacement model names
+  - Models the page marks as "will be deprecated" keep their row with the `deprecated` column set (legacy alias names that only map to a current model are still not listed separately)
 
 ### 3. Fetch model specs (context window / max output tokens)
 
@@ -72,7 +75,8 @@ Based on the fetched information, perform the following:
 - **Add new models**: Add models that exist on the official page but are missing from the CSV. Group models by provider.
 - **Update prices**: Update `input_price` / `output_price` for models whose prices have changed.
 - **Update token limits**: Update `max_input_tokens` / `max_output_tokens` when the spec changes.
-- **Remove deprecated or deleted models**: Remove rows for models that have been discontinued from the official page.
+- **Set the deprecated column**: Fill `deprecated` with the announced shutdown date (or `yes`) for models with a deprecation notice.
+- **Remove shut-down or deleted models**: Remove rows whose shutdown date has passed, or that have been discontinued from the official page.
 - Maintain the existing provider order (OpenAI → Anthropic → Google → DeepSeek).
 - Order models within each provider according to the official page listing order.
 
@@ -84,6 +88,7 @@ After the update is complete, report the following to the user:
 - List of models with price changes (old price → new price)
 - List of models with token-limit changes (old → new)
 - List of removed models
+- List of models newly marked as deprecated (with shutdown date)
 - If no changes were made, report that as well
 
 ### Notes

@@ -17,6 +17,8 @@
     "outputPrice": "Output Price (per 1K tokens)",
     "maxInputTokens": "Max Input Tokens",
     "maxOutputTokens": "Max Output Tokens",
+    "shutdownDate": "Shutdown Date",
+    "deprecatedDateUnknown": "Deprecated (date TBD)",
     "estimatedCost": "Estimated Cost (USD)",
     "pricingLink": "Pricing Details",
     "inputTokens": "Input Tokens",
