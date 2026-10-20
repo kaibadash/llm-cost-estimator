@@ -183,7 +183,7 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
                 <td className={`px-6 py-4 whitespace-nowrap text-sm ${result.deprecated ? 'text-red-600' : 'text-gray-900'}`}>
                   {result.deprecated ? (result.shutdown_date ?? translations.resultsSection.deprecatedDateUnknown) : '—'}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${result.estimatedCost.toFixed(4)}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${result.estimatedCost.toFixed(6)}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-600">
                   <a href={result.pricing_url} target="_blank" rel="noopener noreferrer">
                     Link
