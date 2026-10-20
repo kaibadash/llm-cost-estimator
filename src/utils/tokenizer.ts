@@ -43,8 +43,9 @@ export function calculateCostFromTokens(
   outputPrice: number,
   requestCount: number
 ): number {
-  // 1000トークンあたりの価格から実際のコストを計算
-  const inputCost = (inputTokens / 1000) * inputPrice;
-  const outputCost = (outputTokens / 1000) * outputPrice;
+  // CSV の単価は各社 pricing ページの表記に合わせて 100万トークンあたり。
+  // 初期の CSV は 1,000 トークン単価だったため、ここが 1000 割りのまま残り推定額が1000倍になっていた
+  const inputCost = (inputTokens / 1_000_000) * inputPrice;
+  const outputCost = (outputTokens / 1_000_000) * outputPrice;
   return (inputCost + outputCost) * requestCount;
 }
