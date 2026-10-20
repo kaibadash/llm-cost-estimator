@@ -17,6 +17,8 @@
     "outputPrice": "出力価格（1,000トークンあたり）",
     "maxInputTokens": "最大入力トークン数",
     "maxOutputTokens": "最大出力トークン数",
+    "shutdownDate": "提供終了日",
+    "deprecatedDateUnknown": "廃止予定(日付未定)",
     "estimatedCost": "推定コスト（USD）",
     "pricingLink": "価格詳細",
     "inputTokens": "入力トークン数",

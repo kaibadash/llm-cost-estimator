@@ -53,14 +53,16 @@ The application uses a CSV file to store LLM model pricing data. To update or ad
 2. Maintain the following format for each row:
 
    ```
-   provider,model,input_price,output_price,pricing_url
+   provider,model,input_price,output_price,max_input_tokens,max_output_tokens,pricing_url,deprecated
    ```
 
    - `provider`: The company providing the LLM (e.g., OpenAI, Anthropic)
    - `model`: The specific model name (e.g., GPT-4, Claude 3)
-   - `input_price`: Cost per 1,000 input tokens in USD
-   - `output_price`: Cost per 1,000 output tokens in USD
+   - `input_price`: Cost per 1M input tokens in USD
+   - `output_price`: Cost per 1M output tokens in USD
+   - `max_input_tokens` / `max_output_tokens`: Token limits, or `-` if unknown
    - `pricing_url`: URL to the provider's pricing documentation
+   - `deprecated`: `-` if not deprecated, the shutdown date (`YYYY-MM-DD`) if announced, or `yes` if deprecated without a shutdown date
 
 3. After updating the CSV file, rebuild the application:
 

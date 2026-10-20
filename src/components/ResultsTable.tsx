@@ -153,6 +153,9 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
                   <span className="ml-1">{sortDirection === 'asc' ? '↑' : '↓'}</span>
                 )}
               </th>
+              <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                {translations.resultsSection.shutdownDate}
+              </th>
               <th
                 scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
@@ -177,6 +180,9 @@ export default function ResultsTable({ results, translations }: ResultsTableProp
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${result.output_price.toFixed(6)}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{result.max_input_tokens != null ? result.max_input_tokens.toLocaleString() : '—'}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{result.max_output_tokens != null ? result.max_output_tokens.toLocaleString() : '—'}</td>
+                <td className={`px-6 py-4 whitespace-nowrap text-sm ${result.deprecated ? 'text-red-600' : 'text-gray-900'}`}>
+                  {result.deprecated ? (result.shutdown_date ?? translations.resultsSection.deprecatedDateUnknown) : '—'}
+                </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${result.estimatedCost.toFixed(4)}</td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-600">
                   <a href={result.pricing_url} target="_blank" rel="noopener noreferrer">
